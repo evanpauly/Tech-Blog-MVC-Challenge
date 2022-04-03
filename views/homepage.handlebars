@@ -2,7 +2,7 @@
   {{#each posts as |post|}}
   <li>
     {{> post-info post }}
+    {{format_date post.created_at}}
   </li>
   {{/each}}
-  {{format_date post.created_at}}
 </ul>

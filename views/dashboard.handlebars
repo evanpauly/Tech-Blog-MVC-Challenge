@@ -22,10 +22,10 @@
     <li>
     {{> post-info post}}
     <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
+    {{format_date post.created_at}}
     </li>
     {{/each}}
 </ol>
-{{format_date post.created_at}}
 </section>
 {{/if}}
 
