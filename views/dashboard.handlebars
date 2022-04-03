@@ -17,15 +17,15 @@
 {{#if posts.length}}
 <section>
 <h2>Your Posts</h2>
-<ul>
+<ol>
     {{#each posts as |post|}}
     <li>
     {{> post-info post}}
     <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
-    {{format_date post.created_at}}
     {{/each}}
-</ul>
+</ol>
+{{format_date post.created_at}}
 </section>
 {{/if}}
 
