@@ -18,7 +18,7 @@ a {
 }
 
 a:hover {
-    color: #b3ffb3;
+    color: #00e600;
 }
 
 button {
@@ -105,7 +105,7 @@ main {
 
 .btn-no-style:hover {
     background: none;
-    color: #b3ffb3;
+    color: #00e600;
 }
 
 .delete-post-btn {
@@ -142,7 +142,7 @@ main {
 }
 
 .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: #b3ffb3;
 }
 
 .comment .meta {
