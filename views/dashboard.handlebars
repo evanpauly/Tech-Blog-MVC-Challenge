@@ -19,8 +19,9 @@
 <h2>Your Posts</h2>
 <ul>
     {{#each posts as |post|}}
+    {{format_date post.created_at}}
     <li>
-    {{> post-info post}}{{format_date post.created_at}}
+    {{> post-info post}}
     <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
     </li>
     {{/each}}
