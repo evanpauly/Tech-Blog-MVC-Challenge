@@ -48,7 +48,7 @@ User.findOne({
 });
 
 router.post('/', (req, res) => {
-  // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+//create new user
 User.create({
     username: req.body.username,
     email: req.body.email,
@@ -68,7 +68,7 @@ User.create({
     res.status(500).json(err);
     });
 });
-
+//login route
 router.post('/login', (req, res) => {
 User.findOne({
     where: {
@@ -96,7 +96,7 @@ User.findOne({
     });
 });
 });
-
+//session handling
 router.post('/logout', (req, res) => {
 if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -109,8 +109,6 @@ else {
 });
 
 router.put('/:id', (req, res) => {
-
-  // pass in req.body instead to only update what's passed through
 User.update(req.body, {
     individualHooks: true,
     where: {

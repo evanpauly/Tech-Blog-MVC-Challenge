@@ -40,7 +40,7 @@ Post.findAll({
     res.status(500).json(err);
     });
 });
-
+//edit post route
 router.get('/edit/:id', withAuth, (req, res) => {
 Post.findByPk(req.params.id, {
     attributes: [
